@@ -1,0 +1,42 @@
+[
+    {
+        "image": "",
+        "videoUrl":"assets/video/video1.mp4",
+      "category": "Lifestyle",
+      "date": "Jul 6 '22",
+      "title": "Life Insurance And Pregnancy: A Working Mom’s Guide",
+      "author": "Jenny Wilson",
+      "imageCaption":"",
+      "content" : ""
+    },
+    {
+        "image": "",
+        "videoUrl":"assets/video/video2.mp4",
+      "category": "Business"  ,
+      "date":"Jul 5 '22",
+      "title":"The Best Homemade Masks for Face (keep the Pimples Away)",
+      "author":"Jenny Wilson",
+      "imageCaption":"",
+      "content" : ""
+    },
+    {
+        "image": "",
+        "videoUrl":"assets/video/video3.mp4",
+      "category":"Lifestyle",
+      "date":"Apr 1 '24",
+      "title":" LifeChanging Hacks Every Working Mom Should Know",
+      "author":"Jenny Wilson",
+      "imageCaption":"Lorem ipsum dolor si. Nulla nemo molestias accusamusBeatae ab hic facilis ea eum a reprehenderit &Lorati at odit quibusdam sapiente explicabest quis. Magnam deleniti sed molestiae delectus vero alias totam. ",
+      "content" : ""
+    },
+    {
+        "image": "",
+        "videoUrl":"assets/video/video4.mp4",
+      "category":"Sport",
+      "date":"Ju 29 '22",
+      "title":"How to Avoid Distraction and Stay Focused During Video Calls?",
+      "author":"Jenny Wilson",
+      "imageCaption":"Lorem ipsum dolor si. Nulla nemo molestias accusamusBeatae ab hic facilis ea eum a reprehenderit &Lorati at odit quibusdam sapiente explicabest quis. Magnam deleniti sed molestiae delectus vero alias totam. ",
+      "content" : ""
+    }
+  ]
