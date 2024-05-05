@@ -5,7 +5,8 @@ import Home from "./Components/Home";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
 import StoryDetails from "./Components/StoryDetails"
-
+import YouTubeVideos from "./YoutubeVideos";
+import Video from "./video";
 
 function App() {
   return (
