@@ -18,21 +18,21 @@ const Layout = () => {
 
     return (
         <div>
-            <header id="header" class="header d-flex align-items-center fixed-top">
-                <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <header id="header" className="header d-flex align-items-center fixed-top">
+                <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
                     {/* <img src="assets/img/logo.png" alt="" /> */}
                     <h1>Aviyan Sarathi Project</h1>
-                    <nav id="navbar" class="navbar">
+                    <nav id="navbar" className="navbar">
                         <ul>
-                            <li><a href="index.html">Blog</a></li>
-                            <li><a href="single-post.html">Single Post</a></li>
-                            <li class="dropdown"><a href="category.html"><span>Categories</span> <i
-                                class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    
+                            {/* <li><a href="single-post.html">Single Post</a></li>
+                            <li className="dropdown"><a href="category.html"><span>Categories</span> <i
+                                className="bi bi-chevron-down dropdown-indicator"></i></a>
                                 <ul>
                                     <li><a href="search-result.html">Search Result</a></li>
                                     <li><a href="#">Drop Down 1</a></li>
-                                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
+                                    <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                                        className="bi bi-chevron-down dropdown-indicator"></i></a>
                                         <ul>
                                             <li><a href="#">Deep Drop Down 1</a></li>
                                             <li><a href="#">Deep Drop Down 2</a></li>
@@ -45,7 +45,7 @@ const Layout = () => {
                                     <li><a href="#">Drop Down 3</a></li>
                                     <li><a href="#">Drop Down 4</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
 
                             <li> <a href='/'>Home</a> </li>
                             <li> <Link to="/about">About</Link> </li>
@@ -53,19 +53,19 @@ const Layout = () => {
                         </ul>
                     </nav>
 
-                    <div class="position-relative">
-                        <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
-                        <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
-                        <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
+                    <div className="position-relative">
+                        <a href="#" className="mx-2"><span className="bi-facebook"></span></a>
+                        <a href="#" className="mx-2"><span className="bi-twitter"></span></a>
+                        <a href="#" className="mx-2"><span className="bi-instagram"></span></a>
 
-                        <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
-                        <i class="bi bi-list mobile-nav-toggle"></i>
+                        <a href="#" className="mx-2 js-search-open"><span className="bi-search"></span></a>
+                        <i className="bi bi-list mobile-nav-toggle"></i>
 
-                        <div class="search-form-wrap js-search-form-wrap">
-                            <form action="search-result.html" class="search-form">
-                                <span class="icon bi-search"></span>
-                                <input type="text" placeholder="Search" class="form-control" />
-                                <button class="btn js-search-close"><span class="bi-x"></span></button>
+                        <div className="search-form-wrap js-search-form-wrap">
+                            <form action="search-result.html" className="search-form">
+                                <span className="icon bi-search"></span>
+                                <input type="text" placeholder="Search" className="form-control" />
+                                <button className="btn js-search-close"><span className="bi-x"></span></button>
                             </form>
                         </div>
 
@@ -77,54 +77,50 @@ const Layout = () => {
              {routing || <Home />} {/* Render Home by default if no route matches */}
       
             </main>
-            <footer id="footer" class="footer">
+            <footer id="footer" className="footer flex-shrink">
 
-                <div class="footer-content">
-                    <div class="container">
+                <div className="footer-content py-3 ">
+                    <div className="container ">
 
-                        <div class="row g-5">
-                            <div class="col-lg-4">
-                                <h3 class="footer-heading">About ZenBlog</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ab, perspiciatis beatae autem deleniti
-                                    voluptate nulla a dolores, exercitationem eveniet libero laudantium recusandae officiis qui aliquid
-                                    blanditiis omnis quae. Explicabo?</p>
-                                <p><a href="about.html" class="footer-link-more">Learn More</a></p>
+                        <div className="row g-6">
+                            <div className="col-lg-4">
+                                <h3 className="footer-heading "> <Link to ="/about" className='text-white m-0'>  About </Link></h3>
+                                <p>Preserving stories, bridging hearts. Honoring the past, inspiring the future.
+                                And empowering seniors' voices.
+                                    </p>
+                               
                             </div>
-                            <div class="col-6 col-lg-2">
-                                <h3 class="footer-heading">Navigation</h3>
-                                <ul class="footer-links list-unstyled">
-                                    <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
-                                    <li><a href="index.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Categories</a></li>
-                                    <li><a href="single-post.html"><i class="bi bi-chevron-right"></i> Single Post</a></li>
-                                    <li><a href="about.html"><i class="bi bi-chevron-right"></i> About us</a></li>
-                                    <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                            <div className="col-6 col-lg-2 ">
+                                <h3 className="footer-heading m-0">Navigation</h3>
+                                <ul className="footer-links list-unstyled ">
+                                    <li><a href="index.html"><i className="bi bi-chevron-right"></i> Home</a></li>
+                                    {/* <li><a href="index.html"><i className="bi bi-chevron-right"></i> Blog</a></li>
+                                    <li><a href="category.html"><i className="bi bi-chevron-right"></i> Categories</a></li>
+                                    <li><a href="single-post.html"><i className="bi bi-chevron-right"></i> Single Post</a></li> */}
+                                    <li><a href="about.html"><i className="bi bi-chevron-right"></i> About us</a></li>
+                                    <li><a href="contact.html"><i className="bi bi-chevron-right"></i> Contact</a></li>
                                 </ul>
                             </div>
-                            <div class="col-6 col-lg-2">
-                                <h3 class="footer-heading">Categories</h3>
-                                <ul class="footer-links list-unstyled">
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Business</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Culture</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Food</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Politics</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Celebrity</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Startups</a></li>
-                                    <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a></li>
+                            {/* <div className="col-6 col-lg-2">
+                                <h3 className="footer-heading">Categories</h3>
+                                <ul className="footer-links list-unstyled">
+                                    <li><a href="category.html"><i className="bi bi-chevron-right"></i> Business</a></li>
+                                    <li><a href="category.html"><i className="bi bi-chevron-right"></i> Culture</a></li>
+                                    <li><a href="category.html"><i className="bi bi-chevron-right"></i> Sport</a></li>
+                                   
 
                                 </ul>
-                            </div>
+                            </div> */}
 
-                            <div class="col-lg-4">
-                                <h3 class="footer-heading">Recent Posts</h3>
+                            {/* <div className="col-lg-4">
+                                <h3 className="footer-heading">Recent Posts</h3>
 
-                                <ul class="footer-links footer-blog-entry list-unstyled">
+                                <ul className="footer-links footer-blog-entry list-unstyled">
                                     <li>
-                                        <a href="single-post.html" class="d-flex align-items-center">
-                                            <img src="assets/img/post-sq-1.jpg" alt="" class="img-fluid me-3" />
+                                        <a href="single-post.html" className="d-flex align-items-center">
+                                            <img src="assets/img/post-sq-1.jpg" alt="" className="img-fluid me-3" />
                                             <div>
-                                                <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
+                                                <div className="post-meta d-block"><span className="date">Culture</span> <span className="mx-1">&bullet;</span>
                                                     <span>Jul 5th '22</span>
                                                 </div>
                                                 <span>5 Great Startup Tips for Female Founders</span>
@@ -133,10 +129,10 @@ const Layout = () => {
                                     </li>
 
                                     <li>
-                                        <a href="single-post.html" class="d-flex align-items-center">
-                                            <img src="assets/img/post-sq-2.jpg" alt="" class="img-fluid me-3" />
+                                        <a href="single-post.html" className="d-flex align-items-center">
+                                            <img src="assets/img/post-sq-2.jpg" alt="" className="img-fluid me-3" />
                                             <div>
-                                                <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
+                                                <div className="post-meta d-block"><span className="date">Culture</span> <span className="mx-1">&bullet;</span>
                                                     <span>Jul 5th '22</span>
                                                 </div>
                                                 <span>What is the son of Football Coach John Gruden, Deuce Gruden doing Now?</span>
@@ -144,59 +140,60 @@ const Layout = () => {
                                         </a>
                                     </li>
 
-                                    <li>
-                                        <a href="single-post.html" class="d-flex align-items-center">
-                                            <img src="assets/img/post-sq-3.jpg" alt="" class="img-fluid me-3" />
+                                    {/* <li>
+                                        <a href="single-post.html" className="d-flex align-items-center">
+                                            <img src="assets/img/post-sq-3.jpg" alt="" className="img-fluid me-3" />
                                             <div>
-                                                <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
+                                                <div className="post-meta d-block"><span className="date">Culture</span> <span className="mx-1">&bullet;</span>
                                                     <span>Jul 5th '22</span>
                                                 </div>
                                                 <span>Life Insurance And Pregnancy: A Working Mom’s Guide</span>
                                             </div>
                                         </a>
-                                    </li>
+                                    </li> */}
 
-                                    <li>
-                                        <a href="single-post.html" class="d-flex align-items-center">
-                                            <img src="assets/img/post-sq-4.jpg" alt="" class="img-fluid me-3" />
+                                    {/* <li>
+                                        <a href="single-post.html" className="d-flex align-items-center">
+                                            <img src="assets/img/post-sq-4.jpg" alt="" className="img-fluid me-3" />
                                             <div>
-                                                <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span>
+                                                <div className="post-meta d-block"><span className="date">Culture</span> <span className="mx-1">&bullet;</span>
                                                     <span>Jul 5th '22</span>
                                                 </div>
                                                 <span>How to Avoid Distraction and Stay Focused During Video Calls?</span>
                                             </div>
                                         </a>
-                                    </li>
+                                    </li> 
 
                                 </ul>
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
 
-                <div class="footer-legal">
-                    <div class="container">
+                <div className="footer-legal py-2 ">
+                    <div className="container">
 
-                        <div class="row justify-content-between">
-                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                <div class="copyright">
-                                    © Copyright <strong><span>ZenBlog</span></strong>. All Rights Reserved
+                        <div className="row g-6 justify-content-between m-0">
+                            <div className="col-md-6 text-center text-md-start mb-3 mb-md-0 p-0">
+                                <div className="copyright">
+                                    © Copyright <strong><span>Aviyan Sarathi</span></strong>. All Rights Reserved
                                 </div>
 
-                                <div class="credits">
-                                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                                </div>
+                                
 
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
-                                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                    <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <div className="col-md-6">
+                                <div className="social-links mb-3 mb-lg-0 text-center text-md-end">
+                                <div className="credits">
+                                    Designed by : Team Aviyan-Sarathi
+                                </div>
+                                    {/* <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
+                                    <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
+                                    <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
+                                    <a href="#" className="google-plus"><i className="bi bi-skype"></i></a>
+                                    <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a> */}
                                 </div>
 
                             </div>

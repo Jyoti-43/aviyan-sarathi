@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <Slider />
+      <Slider   />
      <HomePageStories/>
     </div >
   )

@@ -1,42 +1,41 @@
 [
     {
         "image": "",
-        "videoUrl":"assets/video/video1.mp4",
-      "category": "Lifestyle",
-      "date": "Jul 6 '22",
-      "title": "Life Insurance And Pregnancy: A Working Mom’s Guide",
-      "author": "Jenny Wilson",
-      "imageCaption":"",
+        "videoUrl":"https://www.youtube.com/watch?v=J06N-hgsRlU",
+      
+      "date": "Apr 6 '24",
+      "title": "Chemical Enginering.",
+      "author": "Mr.",
+      "imageCaption":" Demo Video",
       "content" : ""
     },
     {
         "image": "",
-        "videoUrl":"assets/video/video2.mp4",
+        "videoUrl":"https://www.youtube.com/watch?v=Aj_hnge3vBA",
       "category": "Business"  ,
       "date":"Jul 5 '22",
-      "title":"The Best Homemade Masks for Face (keep the Pimples Away)",
-      "author":"Jenny Wilson",
+      "title":"How to be socaily aviable and serve the nation.",
+      "author":"Mr.",
       "imageCaption":"",
       "content" : ""
     },
     {
         "image": "",
-        "videoUrl":"assets/video/video3.mp4",
+        "videoUrl":"https://www.youtube.com/watch?v=8k19E7DWcdg",
       "category":"Lifestyle",
       "date":"Apr 1 '24",
-      "title":" LifeChanging Hacks Every Working Mom Should Know",
-      "author":"Jenny Wilson",
-      "imageCaption":"Lorem ipsum dolor si. Nulla nemo molestias accusamusBeatae ab hic facilis ea eum a reprehenderit &Lorati at odit quibusdam sapiente explicabest quis. Magnam deleniti sed molestiae delectus vero alias totam. ",
+      "title":" We should contribute to society and nation",
+      "author":"Mr.",
+      "imageCaption":"Lorem ipsum dolor si. Nulla nemo m Magnam deleniti sed molestiae  alias totam. ",
       "content" : ""
     },
     {
         "image": "",
-        "videoUrl":"assets/video/video4.mp4",
+        "videoUrl":"https://www.youtube.com/watch?v=8szW37VMHhQ",
       "category":"Sport",
       "date":"Ju 29 '22",
-      "title":"How to Avoid Distraction and Stay Focused During Video Calls?",
+      "title":"How to care of ou grand parents?",
       "author":"Jenny Wilson",
-      "imageCaption":"Lorem ipsum dolor si. Nulla nemo molestias accusamusBeatae ab hic facilis ea eum a reprehenderit &Lorati at odit quibusdam sapiente explicabest quis. Magnam deleniti sed molestiae delectus vero alias totam. ",
-      "content" : ""
+      "imageCaption":"Lorem ipsum dolor si. Nulla nem &Lorati at odit quibusdam sapiente exps. Magnam dele"
     }
   ]
