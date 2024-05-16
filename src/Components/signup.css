@@ -1,0 +1,84 @@
+:root{
+    --background-color: blue,
+
+}  
+  
+  
+  
+  
+  .signup-container {
+   
+    margin: 0px 0px;
+    padding: 0;
+   
+    
+    
+}
+ .signup-container .container-body{
+    
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0px;
+    display: flexbox;
+    justify-content: center;
+   
+    padding:0px;
+}
+
+
+  
+
+.field {
+    
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    align-items: left;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    padding: 0 2px;
+    gap: 2px;
+    
+}
+
+
+ input {
+    margin: 5px;
+    justify-content: flex-start;
+    flex: 1;
+    border: 1px solid #dddfe2;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #1d2129;
+    outline-color: #8AB7EF;
+    padding: 6px 8px;
+
+}
+
+.submit {
+    font-size: 20px;
+    color: #fff;
+    line-height: 48px;
+    padding: 0 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 0.25;
+    width: max-content;
+} 
+
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px;
+    box-shadow: none;
+    width: 70%;
+    gap: 5;
+    padding: 20px 0 28px;
+}

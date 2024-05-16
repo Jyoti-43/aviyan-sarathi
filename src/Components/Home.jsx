@@ -14,6 +14,7 @@ const Home = () => {
     <div>
       <Slider   />
      <HomePageStories/>
+     
     </div >
   )
 }

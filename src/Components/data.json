@@ -1,41 +1,27 @@
 [
-    {
-        "image": "",
-        "videoUrl":"https://www.youtube.com/watch?v=J06N-hgsRlU",
-      
-      "date": "Apr 6 '24",
-      "title": "Chemical Enginering.",
-      "author": "Mr.",
-      "imageCaption":" Demo Video",
-      "content" : ""
-    },
-    {
-        "image": "",
-        "videoUrl":"https://www.youtube.com/watch?v=Aj_hnge3vBA",
-      "category": "Business"  ,
-      "date":"Jul 5 '22",
-      "title":"How to be socaily aviable and serve the nation.",
-      "author":"Mr.",
-      "imageCaption":"",
-      "content" : ""
-    },
-    {
-        "image": "",
-        "videoUrl":"https://www.youtube.com/watch?v=8k19E7DWcdg",
-      "category":"Lifestyle",
-      "date":"Apr 1 '24",
-      "title":" We should contribute to society and nation",
-      "author":"Mr.",
-      "imageCaption":"Lorem ipsum dolor si. Nulla nemo m Magnam deleniti sed molestiae  alias totam. ",
-      "content" : ""
-    },
-    {
-        "image": "",
-        "videoUrl":"https://www.youtube.com/watch?v=8szW37VMHhQ",
-      "category":"Sport",
-      "date":"Ju 29 '22",
-      "title":"How to care of ou grand parents?",
-      "author":"Jenny Wilson",
-      "imageCaption":"Lorem ipsum dolor si. Nulla nem &Lorati at odit quibusdam sapiente exps. Magnam dele"
-    }
-  ]
+  {
+    "id": "1",
+    "videoUrl": "https://www.youtube.com/watch?v=J06N-hgsRlU",
+    "date": "Apr 6 '24",
+    "title": "Nepal 3rd Chemical Engineer  From Russian University",
+    "author": "Mr. Garden Dhoj Joshi",
+    "content": "  He is Mr. Garden Dhoj Joshi , the Sugar Chemical Engineer. He is living in Khusibu kathmandu. Having earned a degree in sugar chemical engineering from a Russian University, among the few individuals to pursue such studies during that period.\n Introducing Mr. Garden Dhoj Joshi, a notable figure in the fields of chemical engineering and sugar technology. Graduating in 1987 as one of Nepal’s early pioneers to pursue this degree in Russia, Mr. Joshi has since become a respected advisor at the Ministry of Industry, Commerce, and Supplies. His contributions extend beyond academia, as he actively engages in community development and urban planning initiatives. With a strong commitment to fostering sustainable growth and preserving cultural heritage, Mr. Joshi's expertise continues to shape Nepal's industrial and societal landscape."
+  },
+  {
+    "id": "2",
+    "videoUrl": "https://www.youtube.com/watch?v=Aj_hnge3vBA",
+    "date": "Jul 5 '22",
+    "title": "The Story of Mr. Balaram Thapa -'First Cycle Traveller from Purva to Mechi' ",
+    "author": "Mr. Balaram Thapa",
+    "content": "Mr. Balaram Thapa's remarkable journey began as the first Cycle Traveller from purva to Mechi the entire nation, marking a significant milestone in his life"
+  },
+  {
+    "id": "3",
+    "image": "",
+    "videoUrl": "https://www.youtube.com/watch?v=8k19E7DWcdg",
+    "date": "Apr 1 '24",
+    "title": " The remarkable and skilled Artist along with Volenteering Experiences.",
+    "author": "Mr. Puran Shakya",
+    "content": "Born in 1956, Shakya learned traditional painting from Siddhi Muni Shakya (1979 – 1982). He specialized in mineral color mixing and mudras of different deities. He has worked as Illustrator as well as logo designer. He is also a Lecturer at Lalitkala Campus. \n Besides painting he is active in social work and volunteering. He is the President of Voice of Children (VOC), Lalitpur, a non-government organization working and advocating for street and sexually abused children of Nepal. The organization was established in 2000, and has been working with the goal of improving their living conditions, and legal rights. He is also Program Director of Child Protection Center and Service (CPCS), Lalitpur. CPCS works in rehabilitation of street children to reintegrate these children back into society."
+  }
+]
