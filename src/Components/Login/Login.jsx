@@ -1,23 +1,28 @@
 
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './login.css';
-import SignUp from './SignUp';
+import SignUp from '../SignUp';
 import { Modal } from 'react-bootstrap';
 import axios from 'axios';
+import { useAuth } from '../Auth';
 
 
 
 
 
 const Login = ({ isLoggedIn }) => {
+    
     const [input, setInput] = useState({
         username: '',
         password: '',
 
 
     });
-    const history = useNavigate();
+    const auth = useAuth()
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirectPath = location.state?.path || '/'
     const [loggedIn, setLoggedIn] = useState(false);
     const [submit, setSubmit] = useState({ ...input });
     const [error, setError] = useState({ ...input });
@@ -40,17 +45,17 @@ const Login = ({ isLoggedIn }) => {
         }
 
 
-        //     axios.get('https://localhost:27017/login/login')
-        //         .then((response) => {
-        //             console.log(response.data);
-        //             setInput(response.data)
-        //             setSubmit(true)
+            axios.get('https://localhost:3000/')
+                .then((response) => {
+                    console.log(response.data);
+                    setInput(response.data)
+                    setSubmit(true)
 
-        //         })
+                })
 
-        //         .catch((error) => {
-        //             console.log(error);
-        //         })
+                .catch((error) => {
+                    console.log(error);
+                })
 
 
     }, []);
@@ -72,6 +77,8 @@ const Login = ({ isLoggedIn }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        auth.login(input)
+        navigate(redirectPath , {replace :true})
         setSubmit({
             submit: true,
             ...input
@@ -84,7 +91,7 @@ const Login = ({ isLoggedIn }) => {
             localStorage.setItem('token', response.data.token);
             setLoggedIn(true);
             isLoggedIn(false);
-            history.push('/home'); // Redirect to home after successful login
+            navigate.push('/home'); // Redirect to home after successful login
         } catch (error) {
             console.log(error);
             // Handle login error
@@ -110,6 +117,8 @@ const Login = ({ isLoggedIn }) => {
                         <div className="col">
                             <form action="" method="post" onSubmit={handleSubmit} className='login-form'>
                                 <div className="form_body ">
+                                    <h2>Welcome to </h2>
+                                    
                                     <input className="login-input" type="email" id='email' name="username" placeholder='Email ' value={input.username}
                                         onChange={handleChange} required />
                                     <input className="login-input" type="password" id='password' name="password" placeholder='Password' value={input.password} onChange={handleChange} required />

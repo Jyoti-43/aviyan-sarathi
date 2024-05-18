@@ -126,8 +126,9 @@ const HomePageStories = () => {
                 </div>
               </div>
               
-              <h3 className=" m-0">< Link to="/storyDetails">What is the son of Football Coach John Gruden, Deuce Gruden doing Now? </Link> </h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat exercitationem magni voluptates dolore. Tenetur fugiat voluptates quas, nobis error deserunt aliquam temporibus sapiente, laudantium dolorum itaque libero eos deleniti?</p>
+              <h3 className=" m-0">< Link to="/storyDetails">Born in 1956, Shakya learned traditional painting from Siddhi Muni Shakya (1979 – 1982).."
+   </Link> </h3>
+              <p> He specialized in mineral color mixing and mudras of different deities. </p>
              
             </div>
            

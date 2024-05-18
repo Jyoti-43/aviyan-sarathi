@@ -6,30 +6,43 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import StoryDetails from "./Components/StoryDetails";
 import SignUp from "./Components/SignUp";
-import Login from "./Components/Login";
+import Login from "./Components//Login/Login";
 import Upload from "./Components/Upload";
+import AuthProvider from "./Components/Auth";
+import RequiredAuth from "./Components/RequiredAuth";
+import Stories from './Components/Stories/StoriesPage'
+import Politics from "./Components/Stories/Politics";
+
 
 
 
 function App() {
   return (
     <div className="App">
-     
+      <AuthProvider>
 
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Layout  />}>
-            <Route index element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/storyDetails" element={<StoryDetails />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/upload" element={<Upload />} />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/storyDetails" element={<StoryDetails />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/upload" element={<RequiredAuth> <Upload /> </RequiredAuth>} />
+              <Route path="/stories" element={<Stories />}>
+                <Route path="/stories/politics" element={<Politics />} />
+                <Route path="/stories/politics" element={<Politics />} />
+                <Route path="/stories/politics" element={<Politics />} />
+                <Route path="/stories/politics" element={<Politics />} />
+                <Route path="/stories/politics" element={<Politics />} />
+              </Route>
 
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
 
       {/* <RoutingFile/>
       <Layout/>  */}

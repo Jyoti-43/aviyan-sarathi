@@ -1,16 +1,35 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Home from './Components/Home'
 import "./index.css"
 import Contact from './Components/Contact'
 import About from './Components/About'
-import { Link, Navigate, useRoutes } from 'react-router-dom'
+import { Link, Navigate, useLocation, useNavigate, useRoutes } from 'react-router-dom'
 import StoryDetails from './Components/StoryDetails'
-import Login from './Components/Login'
-import Upload from './Components/Upload'
+import Login from "./Components//Login/Login";
+import Upload from './Components/Upload';
+import { useAuth } from './Components/Auth'
+import Politics from './Components/Stories/Politics'
+import Stories from './Components/Stories/StoriesPage'
 
 
 const Layout = () => {
+    const auth = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation()
+    const [videos, setVideos] = useState([]);
+   
 
+    useEffect(() => {
+        // Fetch videos from JSON file
+        fetch('/videos.json')
+          .then((response) => response.json())
+          .then((data) => setVideos(data.videos))
+          .catch((error) => console.error('Error fetching videos:', error));
+      }, []);
+    
+      const handleUpload = (video) => {
+        setVideos([...videos, video]);
+      };
 
     const routing = useRoutes([
         { path: '/', element: <Home /> },
@@ -18,8 +37,20 @@ const Layout = () => {
         { path: '/about', element: <About /> },
         { path: '/storyDetails', element: <StoryDetails /> },
         { path: '/login', element: <Login /> },
-        { path: '/upload', element: <Upload /> }
+        { path: '/upload', element: <Upload onUpload={handleUpload} /> } ,
+        { path: '/stories', element: <Stories  videos={videos}/> } ,
+        { path: '/stories/political', element: <Politics /> }
+
     ]);
+
+    const handleLogin = () => {
+        <navigate to='/login' />
+    }
+    const handleLogout = () => {
+        
+        localStorage.clear("")
+        navigate('/')
+    }
 
 
     return (
@@ -40,18 +71,39 @@ const Layout = () => {
                                     <li className='nav-item'> <Link className='nav-link' to='/'>Home</Link> </li>
                                     <li className='nav-item'> <Link to="/about" className='nav-link'>About</Link> </li>
                                     <li className='nav-item'> <Link to="/contact" className='nav-link'>Contact</Link> </li>
+                                   
+                                    <li className="nav-item dropdown"><Link to="/stories" className='nav-link'>Stories</Link> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                                        <ul>
+
+                                            <li><Link to="/political">Political</Link></li>
+                                            <li><a href="#">Social Welfare</a></li>
+                                            <li><a href="#">Economy</a></li>
+                                            <li><a href="#">Arts</a></li>
+                                            <li><a href="#">Cultural and Tradition4</a></li>
+                                            <li><a href="#">Personal Experience</a></li>
+                                            <li><a href="#">Others</a></li>
+
+                                        </ul>
+                                    </li>
 
 
                                     <li className='nav-item' >
+
                                         <Link to="/upload" className='nav-link'>
                                             Add Story
                                         </Link>
+
+
+                                    </li>
+                                    <li>
+                                        <Link to='/login'> <button className="btn  m-3" onClick={handleLogin}> Login</button></Link>
+
+                                        {/* <button className="btn  m-3" onClick={handleLogout}> Logout</button> */}
                                     </li>
 
-                                    {/* <Link to="/upload" className='nav-link'>Add Story</Link>  */}
-                                    <Link to="/login">
-                                        <button className="btn  m-3"> Login</button>
-                                    </Link>
+
+
+
                                 </ul>
                             </div>
                         </nav>

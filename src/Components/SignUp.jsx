@@ -12,7 +12,7 @@ import { toBeRequired } from '@testing-library/jest-dom/matchers';
 const SignUp = () => {
 
   const [input, setInput] = useState({
-    userName: '',
+    nameName: '',
     phoneNumber: '',
     email: '',
     password: '',
@@ -30,10 +30,10 @@ const SignUp = () => {
   const handleChange = (e) => {
     const value = e.target.value;
     const name = e.target.name;
-    if (name === 'userName') {
+    if (name === 'nameName') {
       setInput({
         ...input,
-        userName: value,
+        nameName: value,
       })
     }
     else if (name === 'phoneNumber') {
@@ -66,8 +66,8 @@ const SignUp = () => {
     e.preventDefault();
     //  validation
     let formErrors = {};
-    if (input.userName==="") {
-      formErrors.userName = 'User name is required';
+    if (input.nameName==="") {
+      formErrors.nameName = 'User name is required';
     
     }
     if (input.phoneNumber==="") {
@@ -113,16 +113,9 @@ const SignUp = () => {
     }
 
     // sending data to server
-    axios.post('https://localhost:5000/signup/signup', {
-      userName: input.userName,
-      phoneNumber: input.phoneNumber,
-      email: input.email,
-      password: input.password,
-      confirmPassword: input.confirmPassword
-
-    })
+    axios.post('http://localhost:3000/signup')
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
         setPosts(response.data)
         setSubmit(true)
 
@@ -133,7 +126,7 @@ const SignUp = () => {
       })
 
     setInput({
-      userName: '',
+      nameName: '',
       phoneNumber: '',
       email: '',
       password: '',
@@ -158,12 +151,12 @@ const SignUp = () => {
               <label>UserName:</label>
               <input
                 type="text"
-                name="userName"
+                name="nameName"
                 placeholder="User Name Name"
-                value={input.userName}
+                value={input.nameName}
                 onChange={handleChange   }
               />{''}
-              {errors.userName && <div className="error">{errors.userName}</div>}
+              {errors.nameName && <div className="error">{errors.nameName}</div>}
               </div>
               
               <div className="form-group">

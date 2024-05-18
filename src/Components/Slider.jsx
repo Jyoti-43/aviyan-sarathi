@@ -14,26 +14,26 @@ const Slider = () => {
                 interval={30000} // Set the interval for auto sliding in milliseconds
               >
                 <Carousel.Item>
-                  <div className="img-bg d-flex align-items-end" style={{ backgroundImage: `url('assets/img/image2.jpg')`, borderRadius:"15px" , overflow:"hidden" }}>
+                  <div className="img-bg d-flex align-items-end" style={{ backgroundImage: `url('assets/img/slideimg1.jpeg')`, borderRadius:"15px" , overflow:"hidden" }}>
                     <div className="img-bg-inner">
-                      <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
-                      <p>Lorem ipsum dolor sit amet...</p>
+                      <h2></h2>
+                      <p></p>
                     </div>
                   </div>
                 </Carousel.Item>
                 <Carousel.Item>
                   <div className="img-bg d-flex align-items-end " style={{ backgroundImage: `url('assets/img/image3.jpg')`, borderRadius:"15px" , overflow:"hidden" }}>
                     <div className="img-bg-inner">
-                      <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
-                      <p>Lorem ipsum dolor sit amet...</p>
+                      <h2></h2>
+                      <p></p>
                     </div>
                   </div>
                 </Carousel.Item>
                 <Carousel.Item>
                   <div className="img-bg d-flex align-items-end" style={{ backgroundImage: `url('assets/img/image1.jpg')`, borderRadius:"15px" , overflow:"hidden" }}>
                     <div className="img-bg-inner">
-                      <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
-                      <p>Lorem ipsum dolor sit amet...</p>
+                      {/* <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
+                      <p>Lorem ipsum dolor sit amet...</p> */}
                     </div>
                   </div>
                 </Carousel.Item>

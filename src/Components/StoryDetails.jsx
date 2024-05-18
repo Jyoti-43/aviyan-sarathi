@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import postData from './data.json';
 import ReactPlayer from 'react-player';
-import PostWithFacebookPlugin from './CommentOnPost';
+
 
 const StoryDetails = () => {
   const [posts, setPosts] = useState([]);
@@ -57,12 +57,7 @@ const StoryDetails = () => {
                       </figure>
                       <p >{selectedPost.content}</p>
 
-                      {/* facebook plugIn not working */}
-                      <PostWithFacebookPlugin
-                        url="http://localhost:3000/storyDetails"
-                        width="350"
-                        numPosts="5"
-                      />
+                     
 
 
                     </>
@@ -95,12 +90,7 @@ const StoryDetails = () => {
                       <div> <p>If you want to personaly contact the person you can use following contact information:</p>
                         <p>{sortedPosts[0]?.contact} 981800000</p>
                       </div>
-                      <PostWithFacebookPlugin
-                        url="http://localhost:3000/storyDetails"
-                        width="500"
-                        numPosts="5"
-                        height="200"
-                      />
+                      
 
                     </>
                   )}
