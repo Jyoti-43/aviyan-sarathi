@@ -16,7 +16,7 @@ const Slider = () => {
                 <Carousel.Item>
                   <div className="img-bg d-flex align-items-end" style={{ backgroundImage: `url('assets/img/slideimg1.jpeg')`, borderRadius:"15px" , overflow:"hidden" }}>
                     <div className="img-bg-inner">
-                      <h2>Preserving stories, bridging hearts</h2>
+                      <h2>Preserving Stories, Bridging Hearts</h2>
                       <p></p>
                     </div>
                   </div>
@@ -24,7 +24,7 @@ const Slider = () => {
                 <Carousel.Item>
                   <div className="img-bg d-flex align-items-end " style={{ backgroundImage: `url('assets/img/old1.png')`, borderRadius:"15px" , overflow:"hidden" }}>
                     <div className="img-bg-inner">
-                      <h2>Honoring the past, inspiring the future.</h2>
+                      <h2>Honoring The Past, Inspiring The Future.</h2>
                       <p></p>
                     </div>
                   </div>
@@ -32,7 +32,7 @@ const Slider = () => {
                 <Carousel.Item>
                   <div className="img-bg d-flex align-items-end" style={{ backgroundImage: `url('assets/img/old2.jpeg')`, borderRadius:"15px" , overflow:"hidden" }}>
                     <div className="img-bg-inner">
-                     <h2> And empowering seniors' voices.</h2>
+                     <h2>  Empowering Seniors' Voices.</h2>
                        
                     </div>
                   </div>

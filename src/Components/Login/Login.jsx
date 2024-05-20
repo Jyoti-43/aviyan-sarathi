@@ -114,7 +114,7 @@ const Login = ({ isLoggedIn }) => {
                         <div className="col">
                             <form action="" method="post" onSubmit={handleSubmit} className='login-form'>
                                 <div className="form_body ">
-                                    <h2>Welcome to Aviyan Sarathi</h2>
+                                    <h2>Welcome to Aaviyan Sarathi</h2>
                                     <p>Please log into the form</p>
                                     
                                     <input className="login-input" type="email" id='email' name="username" placeholder='Email ' value={input.username}

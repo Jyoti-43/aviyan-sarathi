@@ -121,12 +121,42 @@ const HomePageStories = () => {
               </div>
               
               <h3 className=" m-0">< Link to="/storyDetails">Mr. Puran Shakya well-renowned social worker and sculptor. 
-   </Link> </h3>
+                </Link> </h3>
               <p> Born in 1956, Shakya learned traditional painting from Siddhi Muni Shakya (1979 – 1982).He specialized in mineral color mixing and mudras of different deities. </p>
              
             </div>
            
           </div>
+
+          <div class="d-lg-flex post-entry-2">
+
+<div class="me-3 thumbnail mb-4 mb-lg-0 d-inline-block">
+  <ReactPlayer
+    url="https://youtu.be/e1W09RV1Uq8?si=G-A_aK4UZtFmh4HA"
+    width="95%"
+    height="87%"
+    controls
+  />
+
+</div>
+<div >
+  <div class="post-meta"><span class="date"></span> <span class="mx-1"> </span> <span></span></div>
+  <div class="d-flex align-items-center author">
+    <div class="photo"><img src="assets/img/gardenJoshi.png" alt="" class="img-fluid" /></div>
+    <div class="name">
+      <h3 class="m-0 p-0"> Mr. Garden Dhoj Joshi </h3>
+    </div>
+  </div>
+
+  <h3 className=" m-0">< Link to="/storyDetails"> Story of Mr. Garden Dhoj Joshi  Sugar Chemical Engineer
+  </Link> </h3>
+  <p> A graduate from a Russian University with a degree in Sugar Chemical Engineering, was among the few individuals to pursue such studies during that period. </p>
+
+</div>
+
+
+
+</div>
 
           
 

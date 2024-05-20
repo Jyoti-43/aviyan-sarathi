@@ -8,9 +8,12 @@ import StoryDetails from './Components/StoryDetails'
 import Login from "./Components/Login/Login";
 import Upload from './Components/Upload';
 import AuthProvider from './Components/context/AuthProvider'
-import Politics from './Components/Stories/Politics'
-import Stories from './Components/Stories/StoriesPage'
+import Politics from './Components/Politics'
+import Stories from './Components/StoriesPage'
 import SignUp from './Components/SignUp'
+import Cultural from './Components/Cultural'
+import Others from './Components/OtherPage'
+
 
 
 const Layout = (props) => {
@@ -41,7 +44,9 @@ const Layout = (props) => {
         { path: '/signUp', element: <SignUp /> },
         { path: '/upload', element: <Upload  /> },
         { path: '/stories', element: <Stories /> },
-        { path: '/stories/political', element: <Politics /> }
+        { path: '/stories/politics', element: <Politics /> },
+        { path: '/stories/others', element: <Others /> },
+        { path: '/stories/cultural', element: <Cultural /> }
 
     ]);
 
@@ -56,8 +61,8 @@ const Layout = (props) => {
         <div>
             <header id="header" className="header d-flex align-items-center fixed-top m-0">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between ">
-                    <div className='logo mx-0'>
-                        <img src="assets/img/SarathiLogo.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '150px', maxHeight: '100px' }} />
+                    <div className='logo mx-0 pt-1'>
+                        <img src="assets/img/aviyanLogo.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '250px', maxHeight: '190px' }} />
                     </div>
 
 
@@ -74,13 +79,10 @@ const Layout = (props) => {
                                     <li className="nav-item dropdown"><Link to="/stories" className='nav-link'>Stories</Link> <i class="bi bi-chevron-down dropdown-indicator"></i>
                                         <ul>
 
-                                            <li><Link to="/political">Political</Link></li>
-                                            <li><a href="#">Social Welfare</a></li>
-                                            <li><a href="#">Economy</a></li>
-                                            <li><a href="#">Arts</a></li>
-                                            <li><a href="#">Cultural and Tradition4</a></li>
-                                            <li><a href="#">Personal Experience</a></li>
-                                            <li><a href="#">Others</a></li>
+                                            <li><Link to="/stories/political">Political</Link></li>
+                                            <li><Link to ="/stories/cultural">Cultural</Link></li>
+                                            
+                                            <li><Link to="/stories/others">Others</Link></li>
 
                                         </ul>
                                     </li>
@@ -125,8 +127,8 @@ const Layout = (props) => {
                 <div className="footer-content py-3 ">
                     <div className="container ">
 
-                        <div className="row g-4">
-                            <div className="col-lg-3">
+                        <div className="row g-2">
+                            <div className="col-lg-2">
                                 <h3 className="footer-heading mx-0"> <Link to="/about" className='text-white '>  About </Link></h3>
                                 <p>Preserving stories, bridging hearts. Honoring the past, inspiring the future.
                                     And empowering seniors' voices.
@@ -136,50 +138,59 @@ const Layout = (props) => {
                             
 
 
-                            <div className="col-lg-3">
+                            <div className="col-lg-3 mx-1">
                                 <h3 className="footer-heading mx-0">Navigation</h3>
 
                                 <ul className="footer-links  list-unstyled">
                                     <li>
-                                        <a href="single-post.html" className="d-flex align-items-center">
+                                        <Link to="/" className="d-flex align-items-center">
 
                                             <div>
 
                                                 <span>Home</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a href="single-post.html" className="d-flex align-items-center">
+                                        <Link to="/about" className="d-flex align-items-center">
 
                                             <div>
 
                                                 <span>About</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a href="single-post.html" className="d-flex align-items-center">
+                                        <Link to ="/contact" className="d-flex align-items-center">
 
                                             <div>
 
                                                 <span>Contact</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-lg-1 col-1 mx-2 d-flex justify-content-center">
-                            <span><img src="assets/img/AaviyantaFoundation.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '200px', maxHeight: '350px' }} /> </span>
+                            <div className="col-lg-1 col-1 mx-0 position-relative logo-column">
+                    <img src="assets/img/KMC.png" className="img-fluid rounded-circle ml-4 logo-footer" alt="KMC" />
+                    <img src="assets/img/Aaviyanta.png" className="img-fluid  logo-footer" alt="Aaviyanta Foundation" />
+                    <img src="assets/img/techLeadhers.png" className="img-fluid mb-4 logo-footer" alt="TechLeadhers" />
+                </div>
+                            {/* <div className="col-lg-1 col-1 mx-0 d-flex justify-content-center ">
+                            <span><img src="assets/img/KMC.png" className="img-fluid rounded-circle  mb-4" alt="Aviyan Sarathi" style={{ maxWidth: '200px', maxHeight: '200px' }} /> </span>
+                              
+                            </div>
+                            <div className="col-lg-1 col-1 mx-3 d-flex justify-content-center">
+                            <span><img src="assets/img/AaviyantaFoundation.png" className="img-fluid rounded-circle  mb-4" alt="Aviyan Sarathi" style={{ maxWidth: '200px', maxHeight: '200px' }} /> </span>
                               
                             </div>
                             <div className="col-lg-4 col-4 mx-2 d-flex justify-content-center p-0">
                                         
                                <span> <img src="assets/img/techLeadhers.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '235px', maxHeight: '400px' }} /></span>
                                               
-                            </div>
+                            </div> */}
                             
 
                         </div>
@@ -192,14 +203,14 @@ const Layout = (props) => {
                         <div className="row g-6 justify-content-between m-0">
                             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0 p-0">
                                 <div className="copyright">
-                                    © Copyright <strong><span>Aviyan Sarathi</span></strong>. All Rights Reserved
+                                    © Copyright <strong><span>Aaviyan Sarathi</span></strong>. All Rights Reserved
                                 </div>
                             </div>
 
                             <div className="col-md-6">
                                 <div className="social-links mb-3 mb-lg-0 text-center text-md-end">
                                     <div className="credits">
-                                        Designed by : Team Aviyan-Sarathi
+                                        Designed by : Team Aaviyan-Sarathi
                                     </div>
 
                                 </div>

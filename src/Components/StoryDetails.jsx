@@ -56,7 +56,9 @@ const StoryDetails = () => {
 
                       </figure>
                       <p >{selectedPost.content}</p>
-
+                      <div> <p>If you want to personaly contact the  {selectedPost.author}  you can use following contact information:</p>
+                        <p>{selectedPost.contact} </p>
+                      </div>
                      
 
 
@@ -87,8 +89,8 @@ const StoryDetails = () => {
                         
                       </figure>
                       <p className='text-justify mx-0 p-0'>{sortedPosts[0]?.content}</p>
-                      <div> <p>If you want to personaly contact the person you can use following contact information:</p>
-                        <p>{sortedPosts[0]?.contact} 981800000</p>
+                      <div> <p>If you want to personaly contact the {sortedPosts[0]?.author}  you can use following contact information:</p>
+                        <p>{sortedPosts[0]?.contact} </p>
                       </div>
                       
 
@@ -129,32 +131,7 @@ const StoryDetails = () => {
                       ))}
                     </div>
 
-                    {/* Extraa */}
-                    {/* <div>
-                    <ul className="nav nav-pills custom-tab-nav mb-4" id="pills-tab" role="tablist">
-                    <li className="nav-item" role="presentation">
-                      <h2 className=" " id="pills-latest-tab" type="button" >
-                        Stories
-                      </h2>
-                    </li>
-                  </ul>
-                  <hr/>
-                  <div className="post-meta">
-                  <ReactPlayer className="my-2 mx-5"
-                            url="https://www.youtube.com/watch?v=8k19E7DWcdg"
-                            max-width="40%"
-                            max-height="20%"
-                            controls
-                            active
-                          />
-                            <span className="mx-1">Posted on:</span>{' '}
-                            <span>Api 06th 2024</span>
-                          </div>
-                          <h2 className="mb-2">
-                            <a href="#">How to get motivated to do somthing</a>
-                          </h2>
-                          <span className="author mb-3 d-block">Mr.Balaram Thapa</span>
-                  </div> */}
+                   
                 </div>
                 </div>
               </div>
