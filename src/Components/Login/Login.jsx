@@ -107,15 +107,16 @@ const Login = ({ isLoggedIn }) => {
             <header>
                 <div className="container text-center">
                     <div className='row align-items-center'>
-                        <div className=" col login-logo  mb-3">
+                        <div className=" col login-logo  mb-0">
                             <img src="./assets/img/aviyanLogo.png" alt="Logo " className='logo-img' />
-                            <h2 className='m-2'> Your experiences are valuable. Let everyone's voice be heard and make a difference</h2>
+                            <h2 > Your experiences are valuable. Let everyone's voice be heard and make a difference</h2>
                         </div>
                         <div className="col">
                             <form action="" method="post" onSubmit={handleSubmit} className='login-form'>
                                 <div className="form_body ">
                                     <h2>Welcome to Aaviyan Sarathi</h2>
                                     <p>Please log into the form</p>
+                                   
                                     
                                     <input className="login-input" type="email" id='email' name="username" placeholder='Email ' value={input.username}
                                         onChange={handleChange} required />
@@ -134,16 +135,7 @@ const Login = ({ isLoggedIn }) => {
 
                                     <button className='create' onClick={handleClick}>Sign In</button>
 
-                                    {/* <Modal show={modalOpen} onHide={handleClose}>
-                                        <Modal.Header closeButton>
-                                            <Modal.Title> */}
-
-                                                {/* <h1 className="text-head"> SignUp</h1></Modal.Title> */}
-                                        {/* </Modal.Header>
-                                        <Modal.Body className='modal-body'>
-                                            
-                                        </Modal.Body>
-                                    </Modal> */}
+                                   
 
                                 </div>
                             </form>

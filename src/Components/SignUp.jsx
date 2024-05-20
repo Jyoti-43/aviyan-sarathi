@@ -233,8 +233,8 @@ const SignUp = () => {
           </div >
         </div>
         <div className="signup-image">
-                <img src="./assets/img/old1.png" alt="Sign Up" />
-                <div className='mt-3  '>
+                <img src="./assets/img/old1.png " alt="Sign Up" />
+                <div className='mt-3   '>
                   <p>Every story matters. Share yours and help us pave the way to a better future </p>
                 </div>
               </div>

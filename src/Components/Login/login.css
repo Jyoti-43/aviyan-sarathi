@@ -54,15 +54,21 @@ header .container {
 
 
 .logo-img {
-    max-width: 300px;
+    max-width: 350px;
     /* Set the maximum width of the logo */
-    max-height: 350px;
+    max-height: 205px;
     /* Set the maximum height of the logo */
+    margin: 1px;
+    padding: 0;
 }
 
 .login-logo {
     width: 50%;
     height: 20%;
+}
+.login-logo h2{
+    color: black;
+    margin: 0;
 }
 
 .text-right {
@@ -107,10 +113,14 @@ h3 {
 
 .form_body {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
     padding: 0 12px;
     gap: 15px;
+}
+  p, h2{
+    color: #000610;
 }
 
 form .login-input {
@@ -121,6 +131,8 @@ form .login-input {
     color: #1d2129;
     outline-color: #8AB7EF;
     padding: 14px 16px;
+    justify-content: center;
+width:95%;
 
 }
 
@@ -149,6 +161,7 @@ form .login-input {
     font-weight: bold;
     letter-spacing: 0.25;
     width: 100%;
+    
 }
 
 
@@ -164,7 +177,7 @@ hr {
     background-color: rgb(32, 89, 10);
     font-size: 17px;
     cursor: pointer;
-    color: #a18507;
+    color: white;
     height: 35px;
     width: 192px;
     letter-spacing: 0.25;
