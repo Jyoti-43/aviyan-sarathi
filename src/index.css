@@ -206,6 +206,10 @@ background-color: #F9EFDB;
       display: block;
     }
   }
+
+  .footer-heading p{
+color: white;
+  }
   .logo-column {
     display: flex;
     flex-direction: column;
