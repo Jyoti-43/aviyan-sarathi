@@ -1,16 +1,11 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './login.css';
 import SignUp from '../SignUp';
-import { Modal } from 'react-bootstrap';
+
 import axios from 'axios';
-import { useAuth } from '../Auth';
-
-
-
-
-
+import AuthProvider from '../context/AuthProvider';
 const Login = ({ isLoggedIn }) => {
     
     const [input, setInput] = useState({
@@ -19,14 +14,14 @@ const Login = ({ isLoggedIn }) => {
 
 
     });
-    const auth = useAuth()
+    const auth = useContext(AuthProvider)
     const navigate = useNavigate();
     const location = useLocation();
     const redirectPath = location.state?.path || '/'
     const [loggedIn, setLoggedIn] = useState(false);
     const [submit, setSubmit] = useState({ ...input });
     const [error, setError] = useState({ ...input });
-    const [modalOpen, setModalOpen] = useState(false);
+
 
 
     useEffect(() => {
@@ -39,9 +34,11 @@ const Login = ({ isLoggedIn }) => {
 
     useEffect(() => {
         // Check if user is already logged in
-        const token = localStorage.getItem('token');
-        if (token) {
+        const token = localStorage.getItem('login');
+        //if user is not logged in back to login page
+        if (!token) {
             setLoggedIn(true);
+            navigate('/login')
         }
 
 
@@ -72,13 +69,13 @@ const Login = ({ isLoggedIn }) => {
 
     };
 
-    const handleClose = () => setModalOpen(false);
-    const handleShow = () => setModalOpen(true);
+    const handleClick = () => navigate("/signUp")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        auth.login(input)
-        navigate(redirectPath , {replace :true})
+        //  username ma value set garxa
+        auth.setUser({input})
+
         setSubmit({
             submit: true,
             ...input
@@ -117,7 +114,8 @@ const Login = ({ isLoggedIn }) => {
                         <div className="col">
                             <form action="" method="post" onSubmit={handleSubmit} className='login-form'>
                                 <div className="form_body ">
-                                    <h2>Welcome to </h2>
+                                    <h2>Welcome to Aviyan Sarathi</h2>
+                                    <p>Please log into the form</p>
                                     
                                     <input className="login-input" type="email" id='email' name="username" placeholder='Email ' value={input.username}
                                         onChange={handleChange} required />
@@ -132,20 +130,20 @@ const Login = ({ isLoggedIn }) => {
                                     </div>
 
                                     <hr />
-                                    <p>Don't have account?</p>
+                                   
 
-                                    <button className='create' onClick={handleShow}>Create New Account</button>
+                                    <button className='create' onClick={handleClick}>Sign In</button>
 
-                                    <Modal show={modalOpen} onHide={handleClose}>
+                                    {/* <Modal show={modalOpen} onHide={handleClose}>
                                         <Modal.Header closeButton>
-                                            <Modal.Title>
+                                            <Modal.Title> */}
 
-                                                <h1 className="text-head"> SignUp</h1></Modal.Title>
-                                        </Modal.Header>
+                                                {/* <h1 className="text-head"> SignUp</h1></Modal.Title> */}
+                                        {/* </Modal.Header>
                                         <Modal.Body className='modal-body'>
-                                            <SignUp />
+                                            
                                         </Modal.Body>
-                                    </Modal>
+                                    </Modal> */}
 
                                 </div>
                             </form>

@@ -24,40 +24,6 @@ const HomePageStories = () => {
     setSortedPosts([...posts].sort((a, b) => new Date(b.date) - new Date(a.date)));
 
   }, [posts]);
-  // useEffect(()=>{
-  //     axios.get("http://localhost:3000/read")
-  //     .then((response)=>{
-  //         console.log(response.data);
-  //         setPosts(response.data)
-  //         setPostFlag(true)
-  //     })
-  //     .catch((error)=>{
-  //         console.log(error);
-  //     })
-
-  //     const updateCurrentDate = () => {
-  //       const dateObj = new Date();
-  //       const formattedDate = `${dateObj.getMonth() + 1}/${dateObj.getDate()}/${dateObj.getFullYear()}`;
-  //       setCurrentDate(formattedDate);
-  //     };
-  //     updateCurrentDate();
-
-  //   // Update the current date every second (for real-time effect)
-  //   const intervalId = setInterval(updateCurrentDate, 1000);
-
-  //   // Clean up the interval when the component unmounts
-  //   return () => clearInterval(intervalId);
-  
-
-  // },[]);
-
-  // sort Latest to old post
- 
-
-  
-  
-
-
 
 
 
@@ -69,7 +35,7 @@ const HomePageStories = () => {
         <div class="container" data-aos="fade-up">
 
           <div class="section-header d-flex justify-content-between align-items-center mb-5">
-            <h2>Stories</h2>
+           <span><h2>Stories</h2></span> <span className="ml-2"><Link to="/stories" ><h4 >View all</h4></Link></span>
             <div>
               <h1 className='latest'>
               Latest
@@ -164,12 +130,7 @@ const HomePageStories = () => {
                   </div>
                 </div>
                 
-              </div>
-
-
-           
-
-              
+              </div>           
             
           </div>
         </div>
@@ -181,6 +142,49 @@ const HomePageStories = () => {
 }
 
 export default HomePageStories
+
+
+
+
+  // useEffect(()=>{
+  //     axios.get("http://localhost:3000/read")
+  //     .then((response)=>{
+  //         console.log(response.data);
+  //         setPosts(response.data)
+  //         setPostFlag(true)
+  //     })
+  //     .catch((error)=>{
+  //         console.log(error);
+  //     })
+
+  //     const updateCurrentDate = () => {
+  //       const dateObj = new Date();
+  //       const formattedDate = `${dateObj.getMonth() + 1}/${dateObj.getDate()}/${dateObj.getFullYear()}`;
+  //       setCurrentDate(formattedDate);
+  //     };
+  //     updateCurrentDate();
+
+  //   // Update the current date every second (for real-time effect)
+  //   const intervalId = setInterval(updateCurrentDate, 1000);
+
+  //   // Clean up the interval when the component unmounts
+  //   return () => clearInterval(intervalId);
+  
+
+  // },[]);
+
+  // sort Latest to old post
+
+
+ 
+
+  
+  
+
+
+
+
+
 
 
 

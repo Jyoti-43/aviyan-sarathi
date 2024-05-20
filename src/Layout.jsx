@@ -1,35 +1,36 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Home from './Components/Home'
 import "./index.css"
 import Contact from './Components/Contact'
 import About from './Components/About'
 import { Link, Navigate, useLocation, useNavigate, useRoutes } from 'react-router-dom'
 import StoryDetails from './Components/StoryDetails'
-import Login from "./Components//Login/Login";
+import Login from "./Components/Login/Login";
 import Upload from './Components/Upload';
-import { useAuth } from './Components/Auth'
+import AuthProvider from './Components/context/AuthProvider'
 import Politics from './Components/Stories/Politics'
 import Stories from './Components/Stories/StoriesPage'
+import SignUp from './Components/SignUp'
 
 
-const Layout = () => {
-    const auth = useAuth()
+const Layout = (props) => {
+    const auth = useContext(AuthProvider)
     const navigate = useNavigate()
     const location = useLocation()
     const [videos, setVideos] = useState([]);
-   
+    // const login = props.isLoggedIn;
 
     useEffect(() => {
         // Fetch videos from JSON file
         fetch('/videos.json')
-          .then((response) => response.json())
-          .then((data) => setVideos(data.videos))
-          .catch((error) => console.error('Error fetching videos:', error));
-      }, []);
-    
-      const handleUpload = (video) => {
+            .then((response) => response.json())
+            .then((data) => setVideos(data.videos))
+            .catch((error) => console.error('Error fetching videos:', error));
+    }, []);
+
+    const handleUpload = (video) => {
         setVideos([...videos, video]);
-      };
+    };
 
     const routing = useRoutes([
         { path: '/', element: <Home /> },
@@ -37,20 +38,18 @@ const Layout = () => {
         { path: '/about', element: <About /> },
         { path: '/storyDetails', element: <StoryDetails /> },
         { path: '/login', element: <Login /> },
-        { path: '/upload', element: <Upload onUpload={handleUpload} /> } ,
-        { path: '/stories', element: <Stories  videos={videos}/> } ,
+        { path: '/signUp', element: <SignUp /> },
+        { path: '/upload', element: <Upload  /> },
+        { path: '/stories', element: <Stories /> },
         { path: '/stories/political', element: <Politics /> }
 
     ]);
 
     const handleLogin = () => {
-        <navigate to='/login' />
+       
+        navigate('/login')
     }
-    const handleLogout = () => {
-        
-        localStorage.clear("")
-        navigate('/')
-    }
+   
 
 
     return (
@@ -71,7 +70,7 @@ const Layout = () => {
                                     <li className='nav-item'> <Link className='nav-link' to='/'>Home</Link> </li>
                                     <li className='nav-item'> <Link to="/about" className='nav-link'>About</Link> </li>
                                     <li className='nav-item'> <Link to="/contact" className='nav-link'>Contact</Link> </li>
-                                   
+
                                     <li className="nav-item dropdown"><Link to="/stories" className='nav-link'>Stories</Link> <i class="bi bi-chevron-down dropdown-indicator"></i>
                                         <ul>
 
@@ -87,19 +86,21 @@ const Layout = () => {
                                     </li>
 
 
-                                    <li className='nav-item' >
-
+                                    {/* { auth.user
+                                     ? */}
+                                     <li className='nav-item' > 
                                         <Link to="/upload" className='nav-link'>
                                             Add Story
                                         </Link>
-
-
+                                       
                                     </li>
+                                    
                                     <li>
                                         <Link to='/login'> <button className="btn  m-3" onClick={handleLogin}> Login</button></Link>
-
-                                        {/* <button className="btn  m-3" onClick={handleLogout}> Logout</button> */}
                                     </li>
+                                   
+                                    
+
 
 
 

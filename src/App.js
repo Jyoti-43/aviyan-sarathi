@@ -8,10 +8,11 @@ import StoryDetails from "./Components/StoryDetails";
 import SignUp from "./Components/SignUp";
 import Login from "./Components//Login/Login";
 import Upload from "./Components/Upload";
-import AuthProvider from "./Components/Auth";
-import RequiredAuth from "./Components/RequiredAuth";
+import AuthProvider from "./Components/context/AuthProvider";
+import RequiredAuth from "./Components/context/RequiredAuth";
 import Stories from './Components/Stories/StoriesPage'
 import Politics from "./Components/Stories/Politics";
+
 
 
 
@@ -23,7 +24,7 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Layout />}>
+            <Route path='/' element={<Layout />} >
               <Route index element={<Home />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
@@ -32,7 +33,7 @@ function App() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/upload" element={<RequiredAuth> <Upload /> </RequiredAuth>} />
               <Route path="/stories" element={<Stories />}>
-                <Route path="/stories/politics" element={<Politics />} />
+                <Route index path="/stories/politics" element={<Politics />} />
                 <Route path="/stories/politics" element={<Politics />} />
                 <Route path="/stories/politics" element={<Politics />} />
                 <Route path="/stories/politics" element={<Politics />} />

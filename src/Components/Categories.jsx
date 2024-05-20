@@ -1,9 +1,10 @@
 import React from 'react';
+import Stories from './Stories/StoriesPage';
 
 const Categories = ({ categories, selectedCategory, onCategoryChange }) => {
   return (
     <div>
-      <label htmlFor="categories">Choose a category:</label>
+      <label htmlFor="categories"><Stories/></label>
       <select
         id="categories"
         value={selectedCategory}

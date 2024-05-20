@@ -3,12 +3,7 @@ import { React, useEffect, useState } from 'react';
 
 import './signup.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
-import { Modal } from 'react-bootstrap';
-import { toBeRequired } from '@testing-library/jest-dom/matchers';
-
-
-
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
 
   const [input, setInput] = useState({
@@ -18,12 +13,13 @@ const SignUp = () => {
     password: '',
     confirmPassword: '',
   });
+  const navigate = useNavigate()
   const [posts, setPosts] = useState([]);
   const [submit, setSubmit] = useState(false)
- const [isFormValid, setIsFormValid] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const [errors, setErrors] = useState({});
- 
+
 
 
 
@@ -66,45 +62,46 @@ const SignUp = () => {
     e.preventDefault();
     //  validation
     let formErrors = {};
-    if (input.nameName==="") {
+    if (input.nameName === "") {
       formErrors.nameName = 'User name is required';
-    
+
     }
-    if (input.phoneNumber==="") {
+    if (input.phoneNumber === "") {
       formErrors.phoneNumber = 'Phone Number  is required';
-     
+
     }
     else if (!/(?:\(?\+977\)?)?[9][6-9]\d{8}|01[-]?[0-9]{7}/.test(input.phoneNumber)) {
       formErrors.phoneNumber = 'Phone number is invalid';
-      
+
     }
-    if (input.email==="") {
+    if (input.email === "") {
       formErrors.email = 'Email is required';
-     
+
     } else if (!/\S+@\S+\.\S+/.test(input.email)) {
       formErrors.email = 'Email is invalid';
-      
+
     }
-    if (input.password==="") {
+    if (input.password === "") {
       formErrors.password = 'Password is required';
-     
+
     } else if (input.password.length < 6) {
-      
+
       formErrors.password = 'Password must be at least 6 characters long';
     }
-    if (input.confirmPassword==="") {
+    if (input.confirmPassword === "") {
       formErrors.confirmPassword = 'Confirm Password is required';
-      
+
     } else if (!input.password === input.confirmPassword) {
       formErrors.confirmPassword = 'Confirm Password does not match';
-    
+
     }
 
-    if (Object.keys(formErrors).length === 0) {
+    if (Object.keys(formErrors)?.length === 0) {
       // Form is valid, proceed with submission
       setIsFormValid(true);
       console.log(input);
       setSubmit(true);
+      navigate("/login");
     } else {
       // Form has errors, update state to display error messages
       setIsFormValid(false)
@@ -140,93 +137,108 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="signup-container  ">
-        <div className="container-body ">
-
-          <form onSubmit={handleSubmit} className='signup-form'>
+      <header>
+        <div className="container">
 
 
-            <div className="field ">
-              <div className='form-group'>
-              <label>UserName:</label>
-              <input
-                type="text"
-                name="nameName"
-                placeholder="User Name Name"
-                value={input.nameName}
-                onChange={handleChange   }
-              />{''}
-              {errors.nameName && <div className="error">{errors.nameName}</div>}
-              </div>
-              
-              <div className="form-group">
-              <label>Phone :</label>
-              <input
-                type="number"
-                name="phoneNumber"
-                placeholder=" Phone Number"
-                value={input.phoneNumber}
-                onChange={handleChange}
-              />{''}
-              {errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
-              </div>
-            
-              {/* </div>
+          <div className="signup-container  ">
+            <div className="container-body ">
+
+              <form onSubmit={handleSubmit} className='signup-form '>
 
 
-          <div className="col"> */}
-          <div className="form-group">
-          <label>Email:</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={input.email}
-                onChange={handleChange}
-              />
-              {errors.email && <div className="error">{errors.email}</div>}
-          </div>
-           
-              {/* </div>
+                <div className="field ">
+                <h2 className='text-overlay'>Welcome, to signIn page </h2>
+                <hr/>
+                  <div className='form-group'>
+                    <label style={{ display: "block", textAlign: "left" }}>Full Name:</label>
+                    <input
+                      type="text"
+                      name="nameName"
+                      placeholder="Enter Your Full Name"
+                      value={input.nameName}
+                      onChange={handleChange}
+                    />{''}
+                    {errors.nameName && <div className="error">{errors.nameName}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label style={{ display: "block", textAlign: "left" }}>Phone :</label>
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      placeholder="Enter Your Phone Number"
+                      value={input.phoneNumber}
+                      onChange={handleChange}
+                    />{''}
+                    {errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
+                  </div>
+
+                  {/* </div>
 
 
           <div className="col"> */}
-          <div className="form-group">
-          <label>Password:</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={input.password}
-                onChange={handleChange}
-              />
-              {errors.password && <div className="error">{errors.password}</div>}
-          </div>
-            
-              <div className="form-group">
-              <label>Confirm Password:</label>
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Confirm Password"
-                value={input.confirmPassword}
-                onChange={handleChange}
-              />
-              {errors.password && <div className="error">{errors.confirmPassword}</div>}
-              </div>
-              
-              <div className='submit'>
-                
-                  <button className='btn ' varient='success' type="submit" >Sign Up</button>
-                 
+                  <div className="form-group">
+                    <label style={{ display: "block", textAlign: "left" }}>Email:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder=" Enter Your Email"
+                      value={input.email}
+                      onChange={handleChange}
+                    />
+                    {errors.email && <div className="error">{errors.email}</div>}
+                  </div>
 
-            </div>
+                  {/* </div>
+
+
+          <div className="col"> */}
+                  <div className="form-group">
+                    <label style={{ display: "block", textAlign: "left" }}>Password:</label>
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Enter Your Password"
+                      value={input.password}
+                      onChange={handleChange}
+                    />
+                    {errors.password && <div className="error">{errors.password}</div>}
+                  </div>
+
+                  <div className="form-group">
+                    <label style={{ display: "block", textAlign: "left"  }}>Confirm Password:</label>
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="Enter Your Confirm Password"
+                      value={input.confirmPassword}
+                      onChange={handleChange}
+                    />
+                    {errors.password && <div className="error">{errors.confirmPassword}</div>}
+                  </div>
+
+                  <div className='submit'>
+
+                    <button className='btn ' varient='success' type="submit"  >Sign Up</button>
+
+
+                  </div>
+                </div>
+              </form>
+             
+            </div >
+
+
+          </div >
         </div>
-      </form>
-    </div >
-
-      
-    </div >
+        <div className="signup-image">
+                <img src="./assets/img/old1.png" alt="Sign Up" />
+                <div className='mt-3  '>
+                  <p>Honoring the past, inspiring the future. </p>
+                </div>
+              </div>
+      </header>
     </>
   );
 }
