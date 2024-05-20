@@ -125,20 +125,18 @@ const Layout = (props) => {
                 <div className="footer-content py-3 ">
                     <div className="container ">
 
-                        <div className="row g-6">
-                            <div className="col-lg-4">
+                        <div className="row g-4">
+                            <div className="col-lg-3">
                                 <h3 className="footer-heading mx-0"> <Link to="/about" className='text-white '>  About </Link></h3>
                                 <p>Preserving stories, bridging hearts. Honoring the past, inspiring the future.
                                     And empowering seniors' voices.
                                 </p>
 
                             </div>
-                            <div className="col-6 col-lg-2 ">
-
-                            </div>
+                            
 
 
-                            <div className="col-lg-4">
+                            <div className="col-lg-3">
                                 <h3 className="footer-heading mx-0">Navigation</h3>
 
                                 <ul className="footer-links  list-unstyled">
@@ -171,12 +169,18 @@ const Layout = (props) => {
                                             </div>
                                         </a>
                                     </li>
-
-
-
                                 </ul>
-
                             </div>
+                            <div className="col-lg-1 col-1 mx-2 d-flex justify-content-center">
+                            <span><img src="assets/img/AaviyantaFoundation.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '200px', maxHeight: '350px' }} /> </span>
+                              
+                            </div>
+                            <div className="col-lg-4 col-4 mx-2 d-flex justify-content-center p-0">
+                                        
+                               <span> <img src="assets/img/techLeadhers.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '235px', maxHeight: '400px' }} /></span>
+                                              
+                            </div>
+                            
 
                         </div>
                     </div>

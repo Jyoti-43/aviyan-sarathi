@@ -72,7 +72,7 @@ const HomePageStories = () => {
               </div>
               {/* div sakinxa */}
 
-              <div class="d-lg-flex post-entry-2">
+              {/* <div class="d-lg-flex post-entry-2">
              
              <div class="me-3 thumbnail mb-4 mb-lg-0 d-inline-block">
                   <ReactPlayer
@@ -98,7 +98,37 @@ const HomePageStories = () => {
              
             </div>
            
+          </div> */}
+
+          <div class="d-lg-flex post-entry-2">
+             
+             <div class="me-3 thumbnail mb-4 mb-lg-0 d-inline-block">
+                  <ReactPlayer
+                        url="https://youtu.be/OSQumzI8j7s?si=m1GhIP_VhOazSmB6"
+                        width="93%"
+                        height="87%"
+                        controls
+                      />
+             
+            </div> 
+            <div >
+              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
+              <div class="d-flex align-items-center author">
+                <div class="photo"><img src="assets/img/puranShakya.jpg" alt="" class="img-fluid" /></div>
+                <div class="name">
+                  <h3 class="m-0 p-0">Puran Shakya </h3>
+                </div>
+              </div>
+              
+              <h3 className=" m-0">< Link to="/storyDetails">Mr. Puran Shakya well-renowned social worker and sculptor. 
+   </Link> </h3>
+              <p> Born in 1956, Shakya learned traditional painting from Siddhi Muni Shakya (1979 – 1982).He specialized in mineral color mixing and mudras of different deities. </p>
+             
+            </div>
+           
           </div>
+
+          
 
              
             </div>

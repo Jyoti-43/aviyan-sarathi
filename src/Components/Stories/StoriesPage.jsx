@@ -9,7 +9,7 @@ const StoriesPage = () => {
         <div class="container" data-aos="fade-up">
 
           <div class="section-header d-flex justify-content-between align-items-center mb-5">
-           <span><h2>Stories</h2></span> <span className="ml-2"><Link to="/stories" ><h4 >View all</h4></Link></span>
+           <span><h2>Stories</h2></span> 
             <div>
               <h1 className='latest'>
               All Stories
