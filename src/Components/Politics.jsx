@@ -80,14 +80,6 @@ const Politics = () => {
                 </div>
               </div>
             </div>
-
-
-            
-           
-                        
-
-           
-
           </div>
         </div>
       </section>
