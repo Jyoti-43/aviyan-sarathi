@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
+import { Link } from 'react-router-dom'
 
 const StoriesPage = () => {
   return (
@@ -30,7 +32,7 @@ const StoriesPage = () => {
                   {/* <img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid" /> */}
                 </div> 
                 <div>
-                  <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
+                  <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>Current Date</span></div>
                   <div class="d-flex align-items-center author">
                     <div class="photo"><img src="assets/img/balaramThapa.jpg" alt="" class="img-fluid" /></div>
                     <div class="name">
@@ -56,7 +58,7 @@ const StoriesPage = () => {
              
             </div> 
             <div >
-              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
+              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>Current Date</span></div>
               <div class="d-flex align-items-center author">
                 <div class="photo"><img src="assets/img/puranShakya.jpg" alt="" class="img-fluid" /></div>
                 <div class="name">
@@ -82,22 +84,22 @@ const StoriesPage = () => {
                   <div className="tab-content" id="pills-tabContent">
                     <div className="tab-pane fade show active" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
                       {/* maping of data */}
-                      {sortedPosts.map((post, index) => (
+                   
                         <div
-                          key={index}
+                       
                           className="post-entry-1 border-bottom"
                           // onClick={() => handlePostClick(index)}
                         >
                           <div className="post-meta ">
                             <span className="mx-1"></span>{' '}
-                            <span className="date">{post.date}</span>
+                            <span className="date">date</span>
                           </div>
                           <h2 className="mb-2">
-                            <Link to ="/storyDetails">{post.title}</Link>
+                            <Link to ="/storyDetails">Title</Link>
                           </h2>
-                          <span className="author mb-3 d-block">{post.author}</span>
+                          <span className="author mb-3 d-block">Author Name</span>
                         </div>
-                      ))}
+                    
                     </div>
                   </div>
                 </div>
