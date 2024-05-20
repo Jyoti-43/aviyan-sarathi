@@ -85,6 +85,7 @@ const Upload = () => {
               >
                 <div className="form_body ">
                   <h2>Welcome, Now you can add stories.</h2>
+                  <p>Share your stories and inspire generations.</p>
                   <label style={{ display: "block", textAlign: "left" }}>
                     Full Name
                   </label>

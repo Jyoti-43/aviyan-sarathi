@@ -58,7 +58,7 @@ const HomePageStories = () => {
                   {/* <img src="assets/img/post-landscape-6.jpg" alt="" class="img-fluid" /> */}
                 </div> 
                 <div>
-                  <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
+                  <div class="post-meta"><span class="date"></span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
                   <div class="d-flex align-items-center author">
                     <div class="photo"><img src="assets/img/balaramThapa.jpg" alt="" class="img-fluid" /></div>
                     <div class="name">
@@ -112,7 +112,7 @@ const HomePageStories = () => {
              
             </div> 
             <div >
-              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
+              <div class="post-meta"><span class="date"></span> <span class="mx-1"> </span> <span>{currentDate}</span></div>
               <div class="d-flex align-items-center author">
                 <div class="photo"><img src="assets/img/puranShakya.jpg" alt="" class="img-fluid" /></div>
                 <div class="name">

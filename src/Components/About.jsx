@@ -14,7 +14,7 @@ const About = () => {
 
             <div class="d-md-flex post-entry-2 half">
               <a href="#" class="me-4 thumbnail">
-                <img src="assets/img/image1 (1).jpg" alt="" class="img-fluid" />
+                <img src="assets/img/image1.jpg" alt="" class="img-fluid" />
               </a>
               <div class="ps-md-5 mt-4 mt-md-0 p-3">
 
@@ -46,27 +46,27 @@ const About = () => {
               <div class="row justify-content-center">
                 <div class="col-lg-6">
                   <h2 class="display-4">Our Team</h2>
-                  <p>We Aviyan sarathi,</p>
+                  <p>We Aviyan sarathi</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 text-center mb-5">
-              <img src="assets/img/sona.jpg" alt="" class="img-fluid rounded-circle w-40 mb-4" />
+              <img src="assets/img/sona.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4" />
               <h4>Sona Angzambe</h4>
               <span class="d-block mb-3 text-uppercase">CSIT 7th Semester</span>
-              <p> ea reiciendis sunt ullam temporibus aut!</p>
+              
             </div>
             <div class="col-lg-4 text-center mb-5">
               <img src="assets/img/jyoti.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4" />
               <h4>Jyoti Joshi </h4>
               <span class="d-block mb-3 text-uppercase">BESE 5Th Semester</span>
-              <p>Lorem ipsum dolor sit ameniam, ea reiciendis sunt ullam temporibus aut!</p>
+              
             </div>
             <div class="col-lg-4 text-center mb-5">
-              <img src="assets/img/person-3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-4" />
+              <img src="assets/img/prasana.jpeg" alt="" class="img-fluid rounded-circle w-50 mb-4" />
               <h4>Prasana Maharjan</h4>
               <span class="d-block mb-3 text-uppercase">BMIT 8th Semester</span>
-              <p>Lorem lpa odit veniam, ea reiciendis sunt ullam temporibus aut!</p>
+              
             </div>
           </div>
         </div>
