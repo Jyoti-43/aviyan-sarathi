@@ -107,9 +107,9 @@ const Login = ({ isLoggedIn }) => {
             <header>
                 <div className="container text-center">
                     <div className='row align-items-center'>
-                        <div className=" col login-logo  mb-3 ">
-                            <img src="./assets/img/AaviyanLogo.png" alt="Logo " className='logo-img' />
-                            <h2></h2>
+                        <div className=" col login-logo  mb-3">
+                            <img src="./assets/img/aviyanLogo.png" alt="Logo " className='logo-img' />
+                            <h2 className='m-2'> Your experiences are valuable. Let everyone's voice be heard and make a difference</h2>
                         </div>
                         <div className="col">
                             <form action="" method="post" onSubmit={handleSubmit} className='login-form'>
