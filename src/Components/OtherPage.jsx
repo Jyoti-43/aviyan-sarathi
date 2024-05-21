@@ -39,7 +39,7 @@ const Others = () => {
                   <div class="me-3 thumbnail mb-4 mb-lg-0 d-inline-block">
                     <ReactPlayer
                       url="https://youtu.be/mrW-Fam4Rlg?si=uHWGlY-rZ5kHG6w6"
-                      width="93%"
+                      width="87%"
                       height="87%"
                       controls
                     />
@@ -74,7 +74,7 @@ const Others = () => {
                   <div class="me-3 thumbnail mb-4 mb-lg-0 d-inline-block">
                     <ReactPlayer
                       url="https://youtu.be/joEqjRKf3Yc?si=rLBfTHDNqorqsS8h"
-                      width="93%"
+                      width="99%"
                       height="87%"
                       controls
                     />
