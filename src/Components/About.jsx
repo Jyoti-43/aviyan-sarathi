@@ -14,7 +14,7 @@ const About = () => {
 
             <div class="d-md-flex post-entry-2 half">
               <a href="#" class="me-4 thumbnail">
-                <img src="assets/img/slidimg1.jpg" alt="" class="img-fluid" />
+                <img src="assets/img/slideimg1.jpeg" alt="" class="img-fluid" />
               </a>
               <div class="ps-md-5 mt-4 mt-md-0 p-3">
 
@@ -25,7 +25,7 @@ const About = () => {
 
             <div class="d-md-flex post-entry-2 half mt-5">
               <a href="#" class="me-4 thumbnail order-2">
-                <img src="assets/img/old1.jpg" alt="" class="img-fluid" />
+                <img src="assets/img/old1.png" alt="" class="img-fluid" />
               </a>
               <div class="pe-md-5 mt-4 mt-md-0 p-3">
            
