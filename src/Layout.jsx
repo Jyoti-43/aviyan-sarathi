@@ -61,7 +61,7 @@ const Layout = (props) => {
         <div>
             <header id="header" className="header d-flex align-items-center fixed-top m-0">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between ">
-                    
+
 
 
                     <div className='logo mx-0 pt-1'>
@@ -159,8 +159,8 @@ const Layout = (props) => {
 
 
 
-                            <div className="col-lg-3 mx-1">
-                                <h3 className="footer-heading mx-0">Navigation</h3>
+                            <div className="col-lg-3 mx-4">
+                                <h3 className="footer-heading mx-2">Navigation</h3>
 
                                 <ul className="footer-links  list-unstyled">
                                     <li>
@@ -196,10 +196,11 @@ const Layout = (props) => {
                             </div>
 
                             <div className="col-lg-1 col-1 mx-0 position-relative logo-column">
-                                <h3 className="footer-heading ">Supported By:</h3>
-                                <img src="assets/img/KMC.png" className="img-fluid rounded-circle ml-4 logo-footer" alt="KMC" />
-                                <img src="assets/img/Aaviyanta.png" className="img-fluid mb-4  logo-footer" alt="Aaviyanta Foundation" />
+                                <span><h3 className="footer-heading ">Supported By:</h3></span>
                                 <img src="assets/img/techLeadhers.png" className="img-fluid my-5 logo-footer" alt="TechLeadhers" />
+
+                                <img src="assets/img/KMC.png" className="img-fluid rounded-circle ml-3 logo-footer" alt="KMC" />
+                                <img src="assets/img/Aaviyanta.png" className="img-fluid mb-4  logo-footer" alt="Aaviyanta Foundation" />
                             </div>
 
 
