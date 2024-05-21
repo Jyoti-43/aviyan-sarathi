@@ -55,7 +55,7 @@ background-color: #F9EFDB;
     flex-direction: column;
     align-items: flex-start;
     position: fixed;
-    top: 120px;
+    top: 150px;
     right: -100%;
     z-index: 10;
     width: 190px;
@@ -71,11 +71,6 @@ background-color: #F9EFDB;
     justify-content: flex-start;
     text-decoration: none;
   }
-  
- 
-  
- 
- 
   
   .open-sidebar-button , .close-sidebar-button{
     display: block;
