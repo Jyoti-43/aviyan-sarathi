@@ -11,6 +11,9 @@ background-color: #F9EFDB;
 #header{
     background-color: #B5C18E;
     color: beige;
+    /* change */
+    display: flex;
+
 }
 
  .nav-item .nav-link {
@@ -34,7 +37,71 @@ background-color: #F9EFDB;
   color: white;
 }
 
-@media (min-width: 1280px) {
+/* change start */
+#sidebar-active{
+  display: none;
+  
+}
+.open-sidebar-button , .close-sidebar-button{
+
+ align-items: flex-end;
+  padding: 0 ;
+  display: none;
+}
+
+@media(max-width: 1250px) {
+  .position-relative{
+   
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 120px;
+    right: -100%;
+    z-index: 10;
+    width: 190px;
+    
+    background-color: #B5C18E;
+    transition: 0.85s ease-out;
+  }
+  nav li{
+    box-sizing: border-box;
+    height:auto;
+    width:100%;
+   
+    justify-content: flex-start;
+    text-decoration: none;
+  }
+  
+ 
+  
+ 
+ 
+  
+  .open-sidebar-button , .close-sidebar-button{
+    display: block;
+   padding: 0 0px;
+  }
+  #sidebar-active:checked  ~  .position-relative{
+    padding:0  10px;
+    right: 0;
+   
+  }
+  #sidebar-active:checked  ~  .overlay{
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   top: 0;
+  left:0;
+  z-index: 9;
+   
+  }
+}
+  
+
+
+
+
+/* @media (min-width: 1280px) {
     .navbar {
       padding: 0;
     }
@@ -103,15 +170,15 @@ background-color: #F9EFDB;
     
   
    
-  }
+  } */
   
-  @media (min-width: 1280px) and (max-width: 1366px) {
+  /* @media (min-width: 1280px) and (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
       left: -90%;
     }
   
     
-  }
+  } */
   
   .mobile-nav-toggle {
     display: none;
@@ -119,8 +186,8 @@ background-color: #F9EFDB;
   
   /*--------------------------------------------------------------
   # Mobile Navigation
-  --------------------------------------------------------------*/
-  @media (max-width: 1279px) {
+  /* --------------------------------------------------------------*/
+  /* @media (max-width: 1279px) {
     .navbar {
       padding: 0;
       z-index: 9997;
@@ -207,7 +274,7 @@ background-color: #F9EFDB;
     .mobile-nav-active .navbar>ul {
       display: block;
     }
-  }
+  } */ */
 
   .footer-heading .footer-para{
 color: white;

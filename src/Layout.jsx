@@ -42,7 +42,7 @@ const Layout = (props) => {
         { path: '/storyDetails', element: <StoryDetails /> },
         { path: '/login', element: <Login /> },
         { path: '/signUp', element: <SignUp /> },
-        { path: '/upload', element: <Upload  /> },
+        { path: '/upload', element: <Upload /> },
         { path: '/stories', element: <Stories /> },
         { path: '/stories/politics', element: <Politics /> },
         { path: '/stories/others', element: <Others /> },
@@ -51,38 +51,59 @@ const Layout = (props) => {
     ]);
 
     const handleLogin = () => {
-       
+
         navigate('/login')
     }
-   
+
 
 
     return (
         <div>
             <header id="header" className="header d-flex align-items-center fixed-top m-0">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between ">
+                    
+
+
                     <div className='logo mx-0 pt-1'>
                         <img src="assets/img/aviyanLogo.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '250px', maxHeight: '150px' }} />
                     </div>
+                    {/* new */}
+                    <input type="checkbox" id="sidebar-active" />
+                    <label for="sidebar-active" className='open-sidebar-button '>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </label>
+                    <label id="overlay" for="sidebar-active"></label>
+                    {/* new end */}
 
 
                     <div className="position-relative">
+
                         <nav id="navbar" className="navbar navbar-expand-lg  navbar-dark ">
 
                             <div className="navbar-nav mr-auto mt-2 mt-lg-0">
+                                {/* new */}
+                                <label for="sidebar-active" className='close-sidebar-button'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </label>
+                                {/* end */}
+
                                 <ul>
 
-                                    <li className='nav-item'> <Link className='nav-link' to='/'>Home</Link> </li>
-                                    <li className='nav-item'> <Link to="/about" className='nav-link'>About</Link> </li>
-                                    <li className='nav-item'> <Link to="/contact" className='nav-link'>Contact</Link> </li>
+                                    <li type="none" className='nav-item'> <Link className='nav-link' to='/'>Home</Link> </li>
+                                    <li type="none" className='nav-item'> <Link to="/about" className='nav-link'>About</Link> </li>
+                                    <li type="none" className='nav-item'> <Link to="/contact" className='nav-link'>Contact</Link> </li>
 
-                                    <li className="nav-item dropdown"><Link to="/stories" className='nav-link'>Stories</Link> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                                    <li type="none" className="nav-item dropdown"><Link to="/stories" className='nav-link'>Stories</Link> <i class="bi bi-chevron-down dropdown-indicator"></i>
                                         <ul>
 
-                                            <li><Link to="/stories/politics">Political</Link></li>
-                                            <li><Link to ="/stories/cultural">Cultural</Link></li>
-                                            
-                                            <li><Link to="/stories/others">Others</Link></li>
+                                            <li type="none" className='nav-item'><Link to="/stories/politics">Political</Link></li>
+                                            <li type="none" className='nav-item'><Link to="/stories/cultural">Cultural</Link></li>
+
+                                            <li type="none" className='nav-item' ><Link to="/stories/others">Others</Link></li>
 
                                         </ul>
                                     </li>
@@ -90,18 +111,18 @@ const Layout = (props) => {
 
                                     {/* { auth.user
                                      ? */}
-                                     <li className='nav-item' > 
+                                    <li type="none" className='nav-item' >
                                         <Link to="/upload" className='nav-link'>
                                             Add Story
                                         </Link>
-                                       
+
                                     </li>
-                                    
-                                    <li>
+
+                                    <li type="none">
                                         <Link to='/login'> <button className="btn  m-3" onClick={handleLogin}> Login</button></Link>
                                     </li>
-                                   
-                                    
+
+
 
 
 
@@ -135,7 +156,7 @@ const Layout = (props) => {
                                 </h5>
 
                             </div>
-                            
+
 
 
                             <div className="col-lg-3 mx-1">
@@ -163,7 +184,7 @@ const Layout = (props) => {
                                     </li>
 
                                     <li>
-                                        <Link to ="/contact" className="d-flex align-items-center">
+                                        <Link to="/contact" className="d-flex align-items-center">
 
                                             <div>
 
@@ -173,15 +194,15 @@ const Layout = (props) => {
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div className="col-lg-1 col-1 mx-0 position-relative logo-column">
-                            <h3 className="footer-heading ">Supported By:</h3>
-                    <img src="assets/img/KMC.png" className="img-fluid rounded-circle ml-4 logo-footer" alt="KMC" />
-                    <img src="assets/img/Aaviyanta.png" className="img-fluid mb-4  logo-footer" alt="Aaviyanta Foundation" />
-                    <img src="assets/img/techLeadhers.png" className="img-fluid my-5 logo-footer" alt="TechLeadhers" />
-                </div>
-                            
-                            
+                                <h3 className="footer-heading ">Supported By:</h3>
+                                <img src="assets/img/KMC.png" className="img-fluid rounded-circle ml-4 logo-footer" alt="KMC" />
+                                <img src="assets/img/Aaviyanta.png" className="img-fluid mb-4  logo-footer" alt="Aaviyanta Foundation" />
+                                <img src="assets/img/techLeadhers.png" className="img-fluid my-5 logo-footer" alt="TechLeadhers" />
+                            </div>
+
+
 
                         </div>
                     </div>
