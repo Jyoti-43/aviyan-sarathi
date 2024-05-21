@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "../index.css"
-import axios from 'axios';
+
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 
 
 
 const Politics = () => {
-
-
-
-
-
 
   return (
     <div>
@@ -50,7 +45,7 @@ const Politics = () => {
                       <h3 class="m-0 p-0">Mr. Balaram  Thapa</h3>
                     </div>
                   </div>
-                  <h3 className=" m-0"><Link to="./storyDetails" >First meeting with Mr. Ganesh Man Shrestha By Mr. Balaram Thapa </Link></h3>
+                  <h3 className=" m-0">First meeting with Mr. Ganesh Man Shrestha By Mr. Balaram Thapa </h3>
                   <p>Inspirational words said by Mr. Ganesh Man Shrestha are still true . </p>
 
                 </div>

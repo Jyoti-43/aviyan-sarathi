@@ -62,7 +62,7 @@ const Layout = (props) => {
             <header id="header" className="header d-flex align-items-center fixed-top m-0">
                 <div className="container-fluid container-xl d-flex align-items-center justify-content-between ">
                     <div className='logo mx-0 pt-1'>
-                        <img src="assets/img/aviyanLogo.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '250px', maxHeight: '190px' }} />
+                        <img src="assets/img/aviyanLogo.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '250px', maxHeight: '150px' }} />
                     </div>
 
 
@@ -79,7 +79,7 @@ const Layout = (props) => {
                                     <li className="nav-item dropdown"><Link to="/stories" className='nav-link'>Stories</Link> <i class="bi bi-chevron-down dropdown-indicator"></i>
                                         <ul>
 
-                                            <li><Link to="/stories/political">Political</Link></li>
+                                            <li><Link to="/stories/politics">Political</Link></li>
                                             <li><Link to ="/stories/cultural">Cultural</Link></li>
                                             
                                             <li><Link to="/stories/others">Others</Link></li>
@@ -130,9 +130,9 @@ const Layout = (props) => {
                         <div className="row g-2">
                             <div className="col-lg-2">
                                 <h3 className="footer-heading mx-0"> <Link to="/about" className='text-white '>  About </Link></h3>
-                                <p>Preserving stories, bridging hearts. Honoring the past, inspiring the future.
+                                <h5 className="footer-para" > Preserving stories, bridging hearts. Honoring the past, inspiring the future.
                                     And empowering seniors' voices.
-                                </p>
+                                </h5>
 
                             </div>
                             
@@ -173,24 +173,14 @@ const Layout = (props) => {
                                     </li>
                                 </ul>
                             </div>
+                            
                             <div className="col-lg-1 col-1 mx-0 position-relative logo-column">
+                            <h3 className="footer-heading ">Supported By:</h3>
                     <img src="assets/img/KMC.png" className="img-fluid rounded-circle ml-4 logo-footer" alt="KMC" />
-                    <img src="assets/img/Aaviyanta.png" className="img-fluid  logo-footer" alt="Aaviyanta Foundation" />
-                    <img src="assets/img/techLeadhers.png" className="img-fluid mb-4 logo-footer" alt="TechLeadhers" />
+                    <img src="assets/img/Aaviyanta.png" className="img-fluid mb-4  logo-footer" alt="Aaviyanta Foundation" />
+                    <img src="assets/img/techLeadhers.png" className="img-fluid my-5 logo-footer" alt="TechLeadhers" />
                 </div>
-                            {/* <div className="col-lg-1 col-1 mx-0 d-flex justify-content-center ">
-                            <span><img src="assets/img/KMC.png" className="img-fluid rounded-circle  mb-4" alt="Aviyan Sarathi" style={{ maxWidth: '200px', maxHeight: '200px' }} /> </span>
-                              
-                            </div>
-                            <div className="col-lg-1 col-1 mx-3 d-flex justify-content-center">
-                            <span><img src="assets/img/AaviyantaFoundation.png" className="img-fluid rounded-circle  mb-4" alt="Aviyan Sarathi" style={{ maxWidth: '200px', maxHeight: '200px' }} /> </span>
-                              
-                            </div>
-                            <div className="col-lg-4 col-4 mx-2 d-flex justify-content-center p-0">
-                                        
-                               <span> <img src="assets/img/techLeadhers.png" className='' alt="Aviyan Sarathi" style={{ maxWidth: '235px', maxHeight: '400px' }} /></span>
-                                              
-                            </div> */}
+                            
                             
 
                         </div>

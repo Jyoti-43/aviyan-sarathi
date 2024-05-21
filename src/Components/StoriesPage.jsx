@@ -64,7 +64,7 @@ const StoriesPage = () => {
 
                 <div class="me-3 thumbnail mb-4 mb-lg-0 d-inline-block">
                   <ReactPlayer
-                    url="https://www.youtube.com/watch?v=Aj_hnge3vBA"
+                    url="https://youtu.be/OSQumzI8j7s?si=m1GhIP_VhOazSmB6"
                     width="95%"
                     height="87%"
                     controls
